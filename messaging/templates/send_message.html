@@ -1,0 +1,12 @@
+<!-- messaging/templates/send_message.html -->
+<h2>Send Message</h2>
+<form method="POST" action="{% url 'send_message' %}">
+    {% csrf_token %}
+    <label for="receiver">Receiver:</label>
+    <input type="text" name="receiver" required placeholder="Enter the username" /><br>
+
+    <label for="message">Message:</label>
+    <input type="text" name="message" required placeholder="Type your message here" /><br>
+
+    <button type="submit">Send Message</button>
+</form>

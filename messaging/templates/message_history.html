@@ -1,0 +1,7 @@
+<!-- messaging/templates/message_history.html -->
+<h2>Message History</h2>
+<ul>
+    {% for msg in messages %}
+        <li><strong>{{ msg.sender }}</strong>: {{ msg.message }} ({{ msg.timestamp }})</li>
+    {% endfor %}
+</ul>
